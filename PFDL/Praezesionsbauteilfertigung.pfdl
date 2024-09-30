@@ -1,0 +1,100 @@
+# SPDX-FileCopyrightText: The PFDL Contributors
+# SPDX-License-Identifier: MIT
+
+Struct Asset
+    reinigen: boolean
+    msfr: boolean
+    hsfr: boolean
+    polieren: boolean
+End
+
+Struct Parameter
+    msfr_threshold: number
+    hsfr_threshold: number
+End
+
+Struct VerifyResult
+    valid: boolean
+End
+
+Struct MSFRResult
+    value: number
+End
+
+Struct HSFRResult
+    value: number
+End
+
+Struct QualitiyCheckResult
+    qualityReached: boolean   
+End
+
+Task measurementTask 
+
+End
+
+Task qualitiyCheckTask
+
+    In 
+        hr: HSFRResult
+        mr: MSFRResult
+            
+    Out
+        qc: QualitiyCheckResult.qualityReached
+End
+    
+
+
+
+Task bearbeitungsTask
+    In
+        as: Asset
+    Condition
+        as.reinigen 
+    Passed
+        Reinigen
+
+    
+    Condition
+        as.msfr 
+    Passed
+        MSFR
+
+    Condition
+        as.hsfr 
+    Passed
+        HSFR
+
+    Condition
+        as.polieren
+    Passed
+        Polieren
+End
+
+
+Task productionTask 
+    VerifyParameter
+        In
+            Parameter
+            {
+                "msfr_threshold": 0.7,
+                "hsfr_threshold": 0.23
+            }
+        Out
+            vp: VerifyResult
+    Condition 
+        vp.valid
+    Passed
+        Beladen
+        
+            Out
+                as: Asset
+        
+        Loop While as.reinigen Or as.msfr Or as.hsfr Or as.polieren
+            bearbeitungsTask
+                In 
+                    as
+        Entladen
+
+        
+End

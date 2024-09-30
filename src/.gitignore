@@ -1,0 +1,4 @@
+__pycache__/
+__datafiles__/
+env/
+*.tiff
