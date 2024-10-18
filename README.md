@@ -6,15 +6,17 @@
 
 1. [Overview](#overview)
 2. [Architecture](#architecture)
-3. [Contact](#contact)
-4. [Getting started](#getting-started)
-5. [Tutorial](#tutorial)
-6. [How-To](#how-to)
+3. [Getting started](#getting-started)
+4. [Tutorial](#tutorial)
+5. [How-To](#how-to)
+6. [Contact](#contact)
 7. [Related projects](#related-projects)
 8. [Glossary](#glossary)
 9. [Literature](#literature)
 
 ### Overview
+
+The [SWAP-IT architecture](https://ieeexplore.ieee.org/document/9926665) was developed as part of the [Fraunhofer lighthouse project SWAP-IT](https://www.produktion.fraunhofer.de/en/research/research-cooperations/lighthouse-projects/swap.html). This new technological concept makes it possible to implement the production of tomorrow by transforming rigid production environments with individual processing stations into flexible and dynamic production environments. The core of this innovation is a modular cyber-physical production system (CPPS) that efficiently integrates centralized and decentralized elements as a network of software and mechanical components. The modules are specially designed to adapt seamlessly to different production environments and can be further developed with minimal effort. One use-case for demonstrating the benefits for this approach is for **"Precision Component Production"**.
 
 Traditionally, high-precision components such as mirror optics are mass-produced in a time-intensive and manufactory-like process and then individually characterized using complex measurement technology. But the demand for such components is growing steadily. With conventional manufacturing processes, this leads to enormous machine costs, longer processing times, and limitations in the transition to high-quality serial components. Consequently, new manufacturing approaches are needed to meet the increased demand and at the same time enable economical as well as qualitatively excellent production with increasing requirements and high quantities.
 
@@ -25,11 +27,11 @@ This involves combining various operating resources, like **additive and subtrac
 
 [![Video SWAP success story](images/Swap_PB_Video_Thumb_smaller.jpg)](https://www.iof.fraunhofer.de/en/pressrelease/2023/production-architecture-swap-it-for-efficient-manufacturing-proc.html)
 
-*Fig. 1: (Scene from video) With the help of SWAP-IT, industrial manufacturing processes are to become more flexible, efficient and cost-saving in the future, in this case the high-precision manufacturing of mirrors (full video see [press release](https://www.iof.fraunhofer.de/en/pressrelease/2023/production-architecture-swap-it-for-efficient-manufacturing-proc.html)).*
+*Fig. 1: (Scene from video) With the help of the SWAP-IT architecture, industrial manufacturing processes are to become more flexible, efficient and cost-saving in the future (full video see [press release](https://www.iof.fraunhofer.de/en/pressrelease/2023/production-architecture-swap-it-for-efficient-manufacturing-proc.html)): Three robot-mounted polishing / characterization steps work together for high-precision manufacturing of mirrors*
 
-As a result, individually adaptable components are manufactured efficiently and cost-effectively for both medium and large quantities with consistently high optical surface quality. This efficiency enables a reduction in manufacturing time of 30 percent per mirror, combined with an improvement in the quality characteristics of the mirror surface of up to a factor of two with simultaneous production of multiple mirrors and a resulting time saving by the factor »number of mirrors«. The high-precision, parallelized manufacturing solution opens up individual component sizes and surface accuracies in the micrometer to nanometer range, supported by the latest AI methods.
+As a result, individually adaptable components are manufactured efficiently and cost-effectively for both medium and large quantities with consistently high optical surface quality. This efficiency enables a reduction in manufacturing time of 30 percent per mirror, combined with an improvement in the quality characteristics of the mirror surface of up to a factor of two with simultaneous production of multiple mirrors and a resulting time saving by the factor "number of mirrors". The high-precision, parallelized manufacturing solution opens up individual component sizes and surface accuracies in the micrometer to nanometer range, supported by the latest AI methods. The underlying parallel and iterative batch processing, based on sensor control loops, can hereby easily implemented using the SWAP-IT architecture.
 
-As major outcome from this use case, and part of the success story of Fraunhofer IOF, the flexible optical surface sensor "goSURFmsfr" was developed and presented (see Fig. 2). It allows for monitoring machining marks of diamond machining, measuring mid-spatial-frequency roughness (MSFR), as well as integrated manufacturing and evaluating
+Beside the integration into the SWAP-IT architecture, a major outcome from this use case, and part of the success story of Fraunhofer IOF, was the development and presentation of the flexible optical surface sensor "goSURFmsfr" (see Fig. 2). It allows for monitoring machining marks of diamond machining, measuring mid-spatial-frequency roughness (MSFR), as well as integrated manufacturing and evaluating
 of high-performance mirrors, metal optics and smartphone displays.
 
 [![SmartSurfMSFR](images/goSurf3D_leaflet.jpg)](https://www.iof.fraunhofer.de/content/dam/iof/en/documents/pb/goSURF-msfr-fraunhofer-iof.pdf)
@@ -38,7 +40,7 @@ of high-performance mirrors, metal optics and smartphone displays.
 
 ### Architecture
 
-The SWAP-IT orchestrate multiple components and systems to work simultaneously and increase production speed and efficiency. 
+The SWAP-IT architecture orchestrate multiple components and systems to work simultaneously and increase production speed and efficiency. 
 
 This is attractive especially in dynamic and complex environments that require quick adaptability and creative problem solving.
 The Load-optimized parallel processing is based on strategies and techniques like:
@@ -46,7 +48,7 @@ The Load-optimized parallel processing is based on strategies and techniques lik
 * Load balancing: Real-time distribution of tasks based on the current utilization of resources. That ensure that workloads are distributed evenly across the available resources. 
 * Synchronization and communication: Protocols and technologies that ensure that parallel processes can work together efficiently and exchange data.
 
-SWAP-IT architecture offers significant advantages in terms of speed and scalability. It enable companies to perform complex production steps faster and process large amounts of items more efficiently. This is achieved by a paradigm shift through parallelization of process steps and elimination spatial separation between processing and characterization steps.
+The SWAP-IT architecture offers significant advantages in terms of speed and scalability. It enable companies to perform complex production steps faster and process large amounts of items more efficiently. This is achieved by a paradigm shift through parallelization of process steps and elimination spatial separation between processing and characterization steps.
 
 * Automatic scaling: Dynamic addition or removal of resources based on current demand and utilization.
 * Resource monitoring and management: Use of monitoring tools to continuously monitor the performance and utilization of resources and detect bottlenecks at an early stage.
@@ -54,11 +56,11 @@ SWAP-IT architecture offers significant advantages in terms of speed and scalabi
 
 In Fig. 3, it is shown how our use case of manufacturing precise and high-quality optical surfaces fits into the economical and flexible production architecture.
 
-![Steps](images/_process-steps.jpg)
+![Steps](images/_process-steps_larger.png)
 
 *Fig. 3: SWAP-IT Use-Case "Precision Component Production": how manufacturing precise and high-quality optical surfaces fits within the SWAP Production Architecture.*
 
-Use-Case Assets define interchangeable and independent logical agents and modeled using the **Production Flow Description Language for an Order-Controlled Production** (PFDL):
+Use-Case Assets, according to the [SWAP-IT Demonstration Scenario](https://github.com/swap-it/demo-scenario) "either physical assets, such as production resources, or non physical assets, such as optimization approaches", define interchangeable and independent logical agents and modeled using the **Production Flow Description Language for an Order-Controlled Production** (PFDL):
 
 * Process 1: Polishing and cleaning
 * Process 2: Shape-Measurement and detection of Mid-Spacial-Frequency-Roughness (MSFR)
@@ -74,9 +76,9 @@ In Fig. 4 the realized prototype of this success story can be seen. The three pr
 
 To model the interaction, a PFDL description of the three processes and their interactions has been created (in the repository under `/PFDL`), which is shown in Fig. 5. For any new sample, its process parameters are verified ("VerifyParameter"). Next, the sample gets loaded into the machine ("Beladen") and cleaned ("Reinigen"). After this, MSFR and HSFR measurements can be conducted, as resources allow. Now a mandatory quality check verifies, that the process parameters are reached. If not yet the case, the processing step (polishing, "Polieren") is performed. Otherwise the sample is finished and can be unloaded ("Entladen").
 
-![PFDL Workflow](images/PraezesionsBauteilFertigung_PFDL_graph_v2_small.png)
+![PFDL Workflow](images/PraezesionsBauteilFertigung_PFDL_graph_v2_composite.png)
 
-*Fig. 5: Workflow Modelling with PDFL: Parameter verify, sample load, Cleaning, MSFR, HSFR, Quality check, Polish, sample unload.*
+*Fig. 5: Workflow Modelling with PDFL: Parameter verify, sample load, Cleaning, MSFR, HSFR, Quality check, Polish, sample unload. Left) Graphical visualization of the workflow; Right) Corresponding PFDL source file.*
 
 To summarize, these steps are performed:
 
@@ -90,19 +92,13 @@ To summarize, these steps are performed:
 
 For this use case, and this success story in particular, we furthermore focus on the **MSFR aspect** of the Precision Component Production.
 
-### Contact
-
-For project management related inquiries for the use case "Precision Component Production" at lead project SWAP, and application oriented requests, please contact **Prof. Dr. Gunther Notni**, Fraunhofer IOF, Albert-Einstein-Straße 7, 07745 Jena (phone +49 3641 807-217, email gunther.notni@iof.fraunhofer.de).
-
-For technical questions regarding the documentation and tutorial, please feel free to contact M. Heinze (matthias.heinze@iof.fraunhofer.de) or C. Munkelt (christoph.munkelt@iof.fraunhofer.de).
-
 ### Getting started
 
 For the context of this success story we focus on the specific aspect of the *shape measurement deflectometry* (see Fig. 3 for its position within the larger precision component production use case). See section [Related projects](#related-projects) for further information about the other important aspects of the broader SWAP-IT context.
 
 To begin with, clone the repository [swap-success-story](https://gitlab.cc-asp.fraunhofer.de/swap/use-case-praezisionsbauteil/swap-success-story). It contains this documentation, the use cases source code, accompanying PFDL files for process orchestration and interaction with Order-Controlled Production environments, and example data for the [Tutorial](#tutorial).
 
-Along with the source and this documentation, we also provide sample data of two cylindrical test objects (diameter 46 mm, height 16 mm, see Fig. 6) to get you started. The are ultra precision manufactured metal optics, where the "***MSFR sample***" is showing machining marks and the "***Slope sample***" is showing some slight surface bending.. To access this, navigate to the "*Release*" section (or "*Deploy*" &rarr; "*Releases*") and download the sample data you are interested in.
+Along with the source and this documentation, we also provide sample data of two cylindrical test objects (diameter 46 mm, height 16 mm, see Fig. 6) to get you started. These are ultra precision manufactured metal optics, where the "***MSFR sample***" is showing machining marks and the "***Slope sample***" is showing some slight surface bending. To access this, navigate to the "*Release*" section (or "*Deploy*" &rarr; "*Releases*") and download the sample data you are interested in.
 
 ![Cylindrical test objects](images/Sample_composite_small.png)
 
@@ -189,6 +185,12 @@ For adjustment to the unwrap parameters, e.g., differing number of sinusoidal im
     "modulation_threshold": 4
 ~~~
 
+### Contact
+
+For project management related inquiries for the use case "Precision Component Production" at lead project SWAP, and application oriented requests, please contact **Prof. Dr. Gunther Notni**, Fraunhofer IOF, Albert-Einstein-Straße 7, 07745 Jena (phone +49 3641 807-217, email gunther.notni@iof.fraunhofer.de).
+
+For technical questions regarding the documentation and tutorial, please feel free to contact M. Heinze (matthias.heinze@iof.fraunhofer.de) or C. Munkelt (christoph.munkelt@iof.fraunhofer.de).
+
 ### Related projects
 
 The product leaflet for the utilized roughness sensor for the Measurement of Mid-Spatial-Frequency Roughness of High-Performance Metal Optics can be found here: .
@@ -201,7 +203,24 @@ Please also note the accompanying press release of the Fraunhofer-Gesellschaft: 
 
 The Open Source Modul [ApSi3d](https://gitlab.cc-asp.fraunhofer.de/swap/entwicklungen/swap-os-components/swap-apsi3d.git) generates high accurate surface representatios based on image stacks. 
 
+The following projects are part of the SWAP-IT cosmos. Further information on their interplay and usage can be either found in the individual repositories or in the [SWAP-IT Demonstration Scenario](https://github.com/swap-it/demo-scenario):
+
+* [PFDL-Scheduler](https://github.com/iml130/pfdl)
+* [open62541 OPC UA SDK](https://github.com/open62541/open62541)
+* [swap-it-open62541-server-template](https://github.com/FraunhoferIOSB/swap-it-open62541-server-template)
+* [Common Information Model](https://github.com/FraunhoferIOSB/swap-it-common-information-model)
+* [SWAP-IT Demonstration Scenario](https://github.com/swap-it/demo-scenario)
+
 ### Glossary
+
+Assignment Agent
+: Entity that interacts with an Execution Engine and a Device Registry to assign a service to one concrete resource out of a set of possible resources.
+
+Device Registry
+: Registry Module where resource OPC UA server, representing field level devices, can register themself and thus, make themself available to execute PFDL services. In addition, the Device Registry has a build-in functionality to filter suitable resources for a service execution based on a resource’s capabilities.
+
+Execution Engine
+: Interface between the PFDL scheduler and field level resources that executes the scheduled services on the field level. In addition, it handles the parameter flow between services and tasks.
 
 HSFR
 : High-Spacial-Frequency-Roughness, refers to the fine, small-scale variations in surface texture that occur at high frequencies. This type of roughness is characterized by short wavelength features, which can be significant in applications like optics, semiconductor manufacturing, and surface coatings.
@@ -212,14 +231,23 @@ Modulation
 MSFR
 : Mid-Spacial-Frequency-Roughness, refers to surface texture variations that occur at intermediate wavelengths.
 
+OPC UA Information Model
+: Contains all nodes and references to map a specific entity to an OPC UA server.
+
 PFDL
-: [Production Flow Description Language for an Order-Controlled Production](https://ieeexplore.ieee.org/document/10003953), formal language used to describe the processes and workflows in order-controlled production systems. It helps in modeling the sequence of operations, resources, and logistics involved in manufacturing.
+: [Production Flow Description Language for an Order-Controlled Production](https://ieeexplore.ieee.org/document/10003953) is a domain specific language that describes a production order. It is parsed by the scheduler and transformed into a structure to schedule the execution.
+
+PFDL Scheduler
+: Generates a process sequence out of a PFDL description and schedules the specified services and tasks.
 
 Phase
 : (in the context of phase shifting measurement methods) The position of a point in the wave cycle of the light waves being compared. It is typically represented as an angle (in radians) and indicates the relative displacement between the reference and measurement beams.
 
 Phase-measuring deflectometry
 : An optical measurement technique used to determine the shape and surface profile of an object by analyzing the phase shifts in reflected fringe patterns. By projecting a series of fringes onto the surface and measuring the resulting deformation of these patterns, the technique allows for high-precision 3D reconstruction of the object's surface.
+
+Process Agent
+: Agent consisting of a PFDL scheduler and an Execution Engine. It drives the execution of the process specified within a PFDL.
 
 SWAP-IT
 : [A Scalable and Lightweight Industry 4.0 Architecture for Cyber-Physical Production Systems](https://ieeexplore.ieee.org/document/9926665).
@@ -240,4 +268,4 @@ SWAP-IT
 
 ## License
 
-Distributed under the MIT License. See folder `LICENSES` for more information.
+Distributed under the BSD-3-Clause [license](LICENSES/BSD-3-Clause.txt). See folder `LICENSES` for more information.

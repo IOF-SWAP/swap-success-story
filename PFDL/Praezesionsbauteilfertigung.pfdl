@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: The PFDL Contributors
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: BSD-3-Clause
 
 Struct Asset
     reinigen: boolean
@@ -43,9 +43,6 @@ Task qualitiyCheckTask
         qc: QualitiyCheckResult.qualityReached
 End
     
-
-
-
 Task bearbeitungsTask
     In
         as: Asset
