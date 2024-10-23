@@ -193,7 +193,7 @@ For technical questions regarding the documentation and tutorial, please feel fr
 
 ### Related projects
 
-The product leaflet for the utilized roughness sensor for the Measurement of Mid-Spatial-Frequency Roughness of High-Performance Metal Optics can be found here: .
+The product leaflet for the utilized roughness sensor for the Measurement of Mid-Spatial-Frequency Roughness of High-Performance Metal Optics can be found here: [goSURF-msfr](https://www.iof.fraunhofer.de/content/dam/iof/en/documents/pb/goSURF-msfr-fraunhofer-iof.pdf).
 
 Further information on the Fraunhofer SWAP lead project can be found on the project website of the [Fraunhofer Lead Project SWAP](https://www.fraunhofer.de/en/research/lighthouse-projects-fraunhofer-initiatives/fraunhofer-lighthouse-projects/swap.html).
 
