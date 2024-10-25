@@ -96,7 +96,7 @@ For this use case, and this success story in particular, we furthermore focus on
 
 For the context of this success story we focus on the specific aspect of the *shape measurement deflectometry* (see Fig. 3 for its position within the larger precision component production use case). See section [Related projects](#related-projects) for further information about the other important aspects of the broader SWAP-IT context.
 
-To begin with, clone the repository [swap-success-story](https://gitlab.cc-asp.fraunhofer.de/swap/use-case-praezisionsbauteil/swap-success-story). It contains this documentation, the use cases source code, accompanying PFDL files for process orchestration and interaction with Order-Controlled Production environments, and example data for the [Tutorial](#tutorial).
+To begin with, clone the repository [swap-success-story](https://github.com/IOF-SWAP/swap-success-story). It contains this documentation, the use cases source code, accompanying PFDL files for process orchestration and interaction with Order-Controlled Production environments, and example data for the [Tutorial](#tutorial).
 
 Along with the source and this documentation, we also provide sample data of two cylindrical test objects (diameter 46 mm, height 16 mm, see Fig. 6) to get you started. These are ultra precision manufactured metal optics, where the "***MSFR sample***" is showing machining marks and the "***Slope sample***" is showing some slight surface bending. To access this, navigate to the "*Release*" section (or "*Deploy*" &rarr; "*Releases*") and download the sample data you are interested in.
 
@@ -120,7 +120,7 @@ The provided images were obtained with the Flexible optical surface sensor "goSU
 We provide a beginners tutorial, showing how to process image stacks of flat objects, in order to make mid-spatial-frequency (MSFR) defects visible. To use the provided source on your own measurements, refer to the [How-To](#how-to) section. First, clone the repository using `git`:
 
 ~~~
-git clone https://gitlab.cc-asp.fraunhofer.de/swap/use-case-praezisionsbauteil/swap-success-story.git
+git clone https://github.com/IOF-SWAP/swap-success-story.git
 ~~~
 
 Then open a python terminal and change into the source directory. For convinience you can create and activate a virtual environment in the source folder:
