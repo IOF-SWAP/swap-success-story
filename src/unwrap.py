@@ -2,7 +2,7 @@
 #
 # SPDX-FileCopyrightText: 2024, M.Heinze <matthias.heinze@iof.fraunhofer.de>, C.Munkelt <christoph.munkelt@iof.fraunhofer.de>
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: BSD-3-Clause
 #
 # Distributed under the BSD-3-Clause License. See LICENSES for more information.
 #
